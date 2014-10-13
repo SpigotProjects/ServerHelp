@@ -1,0 +1,159 @@
+package me.scottapple_.serverhelp;
+
+import java.io.File;
+
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.permissions.Permission;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class ServerHelp extends JavaPlugin {
+
+	public Permission playerPermission = new Permission("serverhelp.staff");
+	public Permission playerPermission1 = new Permission("serverhelp.tutorial");
+	public Permission playerPermission11 = new Permission("serverhelp.reload");
+	public Permission playerPermission111 = new Permission("serverhelp.email");
+	public Permission playerPermission1111 = new Permission("serverhelp.commands");
+	public Permission playerPermission11111 = new Permission("serverhelp.website");
+	public Permission playerPermission111111 = new Permission("serverhelp.twitter");
+	public Permission playerPermission1111111 = new Permission("serverhelp.facebook");
+	public Permission playerPermission11111111 = new Permission("serverhelp.youtube");
+	public Permission playerPermission111111111 = new Permission("serverhelp.donations");
+
+	@Override
+	public void onEnable() {
+		getLogger().info("ServerHelp has been enabled!");
+		
+		File file = new File(getDataFolder() + File.separator + "config.yml");
+		
+		if (!file.exists()) {
+			this.getLogger().info("ServerHelp config.yml doesn't exist, creating one for you now!");
+			
+			this.getConfig().addDefault("StaffMessage", "Please put your staff list in the config.yml!");
+			this.getConfig().addDefault("Tutorial", "Please put your tutorial in the config.yml!");
+			this.getConfig().addDefault("Email", "Please put your email in the config.yml!");
+			this.getConfig().addDefault("Website", "Please put your website link in the config.yml!");
+			this.getConfig().addDefault("Twitter", "Please put your twitter link in the config.yml!");
+			this.getConfig().addDefault("Facebook", "Please put your facebook link in the config.yml!");
+			this.getConfig().addDefault("Donate", "Please put your donation link in the config.yml!");
+			this.getConfig().addDefault("Youtube", "Please put your youtube link in the config.yml!");
+			this.getConfig().addDefault("Commands", "If you want to view your permissions, do /help!");
+			this.getConfig().options().copyDefaults(true);
+			this.saveConfig();
+		}
+	}
+
+	@Override
+	public void onDisable() {			
+		getLogger().info("ServerHelp has been disabled!");
+		this.saveConfig();
+	}
+
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+		if (cmd.getName().equalsIgnoreCase("donate") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.donations") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Donate"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("youtube") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.youtube") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Youtube"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("website") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.website") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Website"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("facebook") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.facebook") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Facebook"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("twitter") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.twitter") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Twitter"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("commands") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.commands") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Commands"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("email") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.email") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Email"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("staff") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.staff") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("StaffMessage"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+		}
+		if (cmd.getName().equalsIgnoreCase("tutorial") && sender instanceof Player) {
+
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.tutorial") || player.isOp()) {
+				sender.sendMessage(this.getConfig().getString("Tutorial"));
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+			return true;
+
+
+		}
+		if (cmd.getName().equalsIgnoreCase("shreload")) {
+			Player player = (Player) sender;
+			if(player.hasPermission("serverhelp.reload") || player.isOp()) {
+			this.reloadConfig();
+			sender.sendMessage(ChatColor.YELLOW + "The ServerHelp configuration file was reloaded!");
+			} else {
+				sender.sendMessage(ChatColor.RED + "You don't have access to use this command!");
+			}
+		}
+		return false;
+	}
+}
