@@ -23,7 +23,7 @@ commands:
       description: Does stuff
   tutorial:
       description: Does stuff
-  tutorial:
+  teamspeak:
       description: Does stuff
   mumble:
       description: Does stuff
@@ -37,11 +37,47 @@ commands:
       description: Does stuff
 permissions:
   serverhelp.donate:
-    description: /donate
+    description: /<command>
     default: op
   serverhelp.youtube:
-    description: /youtube
+    description: /<command>
     default: op
   serverhelp.website:
-    description: /website
+    description: /<command>
     default: op
+  serverhelp.facebook:
+      description: /<command>
+      default: op
+  serverhelp.twitter:
+      description: /<command>
+      default: op
+  serverhelp.commands:
+      description: /<command>
+      default: op
+  serverhelp.email:
+      description: /<command>
+      default: op
+  serverhelp.staff:
+      description: /<command>
+      default: op
+  serverhelp.tutorial:
+      description: /<command>
+      default: op
+  serverhelp.teamspeak:
+      description: /<command>
+      default: op
+  serverhelp.mumble:
+        description: /<command>
+        default: op
+  serverhelp.shreload:
+        description: /<command>
+        default: op
+  serverhelp.vote:
+        description: /<command>
+        default: op
+  serverhelp.thread:
+        description: /<command>
+        default: op
+  serverhelp.link:
+        description: /<command>
+        default: op
