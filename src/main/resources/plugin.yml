@@ -39,3 +39,9 @@ permissions:
   serverhelp.donate:
     description: /donate
     default: op
+  serverhelp.youtube:
+    description: /youtube
+    default: op
+  serverhelp.website:
+    description: /website
+    default: op
