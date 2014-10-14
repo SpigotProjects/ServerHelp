@@ -15,30 +15,69 @@ commands:
     description: Does stuff
   twitter:
     description: Does stuff
-  donate:
-    description: Does stuff
+  commands:
+      description: Does stuff
+  email:
+      description: Does stuff
+  staff:
+      description: Does stuff
+  tutorial:
+      description: Does stuff
+  teamspeak:
+      description: Does stuff
+  mumble:
+      description: Does stuff
+  shreload:
+      description: Does stuff
+  vote:
+      description: Does stuff
+  thread:
+      description: Does stuff
+  link:
+      description: Does stuff
 permissions:
-  flashlight.use:
-    description: Use of the flashlight
+  serverhelp.donate:
+    description: /<command>
     default: op
-  flashlight.use.on:
-    description: Turns the flashlight on
+  serverhelp.youtube:
+    description: /<command>
     default: op
-  flashlight.use.off:
-    description: Turns flashlight off
+  serverhelp.website:
+    description: /<command>
     default: op
-  flashlight.use.spawn:
-    description: Spawns in Flashlight torch
-    default: op
-  flashlight.admin.reload:
-    description: Reload the configuration file
-    default: op
-  flashlight.bypasscooldown:
-    description: Allow bypass of the cool down
-    default: op
-  flashlight.use.torch:
-    description: Allows use of the torch
-    default: op
-  flashlight.admin.sign:
-    description: Ability to create FlashlightPlus sign
-    default: op
+  serverhelp.facebook:
+      description: /<command>
+      default: op
+  serverhelp.twitter:
+      description: /<command>
+      default: op
+  serverhelp.commands:
+      description: /<command>
+      default: op
+  serverhelp.email:
+      description: /<command>
+      default: op
+  serverhelp.staff:
+      description: /<command>
+      default: op
+  serverhelp.tutorial:
+      description: /<command>
+      default: op
+  serverhelp.teamspeak:
+      description: /<command>
+      default: op
+  serverhelp.mumble:
+        description: /<command>
+        default: op
+  serverhelp.shreload:
+        description: /<command>
+        default: op
+  serverhelp.vote:
+        description: /<command>
+        default: op
+  serverhelp.thread:
+        description: /<command>
+        default: op
+  serverhelp.link:
+        description: /<command>
+        default: op

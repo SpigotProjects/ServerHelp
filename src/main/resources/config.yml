@@ -16,3 +16,5 @@ Messages:
   ThreadMsg: ""
   LinkMsg: ""
   NoPermMsg: ""
+Backend:
+  vote: true
