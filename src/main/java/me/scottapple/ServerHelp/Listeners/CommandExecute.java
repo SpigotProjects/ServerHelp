@@ -40,14 +40,16 @@ public class CommandExecute implements CommandExecutor {
             player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.MumbleMsg"))));
         } else if (cmd.getName().equalsIgnoreCase("shreload") && player.hasPermission("serverhelp.reload")) {
             ServerHelp.getPlugin().reloadConfig();
-        } else if (cmd.getName().equalsIgnoreCase("vote") && player.hasPermission("serverhelp.vote")) {
-            player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.VoteMsg"))));
-        } else if (cmd.getName().equalsIgnoreCase("thread") && player.hasPermission("serverhelp.thread")) {
-            player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.ThreadMsg"))));
-        } else if (cmd.getName().equalsIgnoreCase("link") && player.hasPermission("serverhelp.link")) {
-            player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.LinkMsg"))));
-        } else {
-            player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.NoPermMsg"))));
+        } else if (ServerHelp.getPlugin().getConfig().getBoolean("Backend.vote", true)) {
+            if (cmd.getName().equalsIgnoreCase("vote") && player.hasPermission("serverhelp.vote")) {
+                player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.VoteMsg"))));
+            } else if (cmd.getName().equalsIgnoreCase("thread") && player.hasPermission("serverhelp.thread")) {
+                player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.ThreadMsg"))));
+            } else if (cmd.getName().equalsIgnoreCase("link") && player.hasPermission("serverhelp.link")) {
+                player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.LinkMsg"))));
+            } else {
+                player.sendMessage(ServerHelp.getMessage(ChatColor.translateAlternateColorCodes('&', ServerHelp.getPlugin().getConfig().getString("Messages.NoPermMsg"))));
+            }
         }
         return true;
     }
