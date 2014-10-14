@@ -18,27 +18,6 @@ commands:
   donate:
     description: Does stuff
 permissions:
-  flashlight.use:
-    description: Use of the flashlight
-    default: op
-  flashlight.use.on:
-    description: Turns the flashlight on
-    default: op
-  flashlight.use.off:
-    description: Turns flashlight off
-    default: op
-  flashlight.use.spawn:
-    description: Spawns in Flashlight torch
-    default: op
-  flashlight.admin.reload:
-    description: Reload the configuration file
-    default: op
-  flashlight.bypasscooldown:
-    description: Allow bypass of the cool down
-    default: op
-  flashlight.use.torch:
-    description: Allows use of the torch
-    default: op
-  flashlight.admin.sign:
-    description: Ability to create FlashlightPlus sign
+  serverhelp.donate:
+    description: /donate
     default: op
