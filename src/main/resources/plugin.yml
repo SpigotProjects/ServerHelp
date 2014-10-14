@@ -15,8 +15,26 @@ commands:
     description: Does stuff
   twitter:
     description: Does stuff
-  donate:
-    description: Does stuff
+  commands:
+      description: Does stuff
+  email:
+      description: Does stuff
+  staff:
+      description: Does stuff
+  tutorial:
+      description: Does stuff
+  tutorial:
+      description: Does stuff
+  mumble:
+      description: Does stuff
+  shreload:
+      description: Does stuff
+  vote:
+      description: Does stuff
+  thread:
+      description: Does stuff
+  link:
+      description: Does stuff
 permissions:
   serverhelp.donate:
     description: /donate
