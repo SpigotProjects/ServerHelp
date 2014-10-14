@@ -1,0 +1,44 @@
+name: ServerHelp
+author: ScottApple_ #Plus the help of FallenYouth
+version: 1.0.0
+main: me.scottapple.ServerHelp.Serverhelp
+description: A plugin that helps you with your server!
+
+commands:
+  donate:
+    description: Does stuff
+  youtube:
+    description: Does stuff
+  website:
+    description: Does stuff
+  facebook:
+    description: Does stuff
+  twitter:
+    description: Does stuff
+  donate:
+    description: Does stuff
+permissions:
+  flashlight.use:
+    description: Use of the flashlight
+    default: op
+  flashlight.use.on:
+    description: Turns the flashlight on
+    default: op
+  flashlight.use.off:
+    description: Turns flashlight off
+    default: op
+  flashlight.use.spawn:
+    description: Spawns in Flashlight torch
+    default: op
+  flashlight.admin.reload:
+    description: Reload the configuration file
+    default: op
+  flashlight.bypasscooldown:
+    description: Allow bypass of the cool down
+    default: op
+  flashlight.use.torch:
+    description: Allows use of the torch
+    default: op
+  flashlight.admin.sign:
+    description: Ability to create FlashlightPlus sign
+    default: op
