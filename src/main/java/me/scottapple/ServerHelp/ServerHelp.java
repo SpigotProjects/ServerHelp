@@ -11,9 +11,10 @@ import java.io.IOException;
 
 public class ServerHelp extends JavaPlugin {
 
+    //Allows other classes to use the methods in this class
     @Getter
     public static ServerHelp plugin;
-
+    //config version
     int version = 1;
 
     @Override
@@ -40,12 +41,13 @@ public class ServerHelp extends JavaPlugin {
             }
         }
     }
-
+    //Updates config if the version number has been changed
     private void updateConfig() {
         File tempfile = new File(this.getDataFolder() + File.separator + "oldconfig.yml");
 
         FileConfiguration oldC = YamlConfiguration.loadConfiguration(tempfile);
         this.saveDefaultConfig();
+        //copies defaults over
         this.getConfig().set("Messages.DonateMsg", oldC.getString("Messages.DonateMsg"));
         this.getConfig().set("Messages.YoutubeMsg", oldC.getString("Messages.YoutubeMsg"));
         this.getConfig().set("Messages.WebsiteMsg", oldC.getString("Messages.FlashlightOffMsg"));
@@ -56,6 +58,7 @@ public class ServerHelp extends JavaPlugin {
         this.getConfig().set("Messages.StaffMsg", oldC.getString("Messages.StaffMsg"));
         this.saveConfig();
     }
+    //Message configuration method
     public static String getMessage(String message) {
         return ChatColor.translateAlternateColorCodes('&', getPlugin().getConfig().getConfigurationSection("Messages").getString("Prefix") + message);
     }
