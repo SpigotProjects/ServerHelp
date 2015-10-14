@@ -11,7 +11,7 @@ I created the ServerHelp plugin for the sole purpose of helping people. ServerHe
 
 Why should I get this plugin? 
 =============================
-Good question! This plugin will eliminate tons of questions players ask you. Some of those many questions are;
+Good question! This plugin will eliminate tons of questions players ask you. Some of those many questions are:
 - How do I play?
 - Are you a staff member?
 - Who are the staff members?
@@ -23,7 +23,7 @@ and many more!
 
 What are the commands and permissions?
 ======================================
-Note: Operators (OPs) always have these permissions.. Please also note, that for this plugin you need to have a permission plugin. Some examples are; PermissionsEx, bPermissions, GroupManager and ect. 
+Note: Operators (OPs) always have these permissions.. Please also note, that for this plugin you need to have a permission plugin. Some examples are: PermissionsEx, bPermissions, GroupManager and ect. 
 
 Command || Permission || Edit message in config
 ===============================================
